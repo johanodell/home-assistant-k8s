@@ -3,7 +3,7 @@ kind: Application
 metadata:
   annotations:
     argocd.argoproj.io/compare-options: IgnoreExtraneous
-  name: home-assistant-psilab
+  name: home-assistant
   namespace: openshift-gitops
 spec:
   destination:
@@ -12,7 +12,7 @@ spec:
   project: default
   source:
     path: openshift
-    repoURL: https://github.com/kevchu3/home-assistant-k8s.git
+    repoURL: https://github.com/johanodell/home-assistant-k8s.git 
     targetRevision: HEAD
   syncPolicy:
     automated:
